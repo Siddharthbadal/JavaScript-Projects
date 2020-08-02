@@ -1,0 +1,93 @@
+html{
+	font-size: 10px;
+	color: #4e4d4d;
+}
+
+main{
+	max-width: 50rem;
+	margin:  0 auto;
+	background: radial-gradient(circle, rgba(3,147,212,1) 1%, rgba(0,212,255,1) 91%, rgba(9,9,121,1) 100%);
+	padding: 3rem 1.6rem 6rem 1.6rem;
+	border-radius: 4rem;
+	box-shadow: 0 2px 2px grey;
+}
+
+h1{
+	text-align: center;
+	font-size: 4rem;
+	margin: 0;
+	padding-bottom: 3rem;
+}
+section{
+	background: white;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	padding:0 1.8rem;
+	border-radius: 1rem;
+	box-shadow: inset 0 2px 2px grey;
+}
+
+section > div {
+	padding: 1.5rem 0;
+}
+.bill{
+	display: flex;
+}
+.bill label{
+	flex: 1;
+	align-self: center;
+}
+.bill input{
+	flex: 3;
+}
+
+input[type="number"]{
+	background:  #f4f4f4;
+	font-size: 1.8rem;
+	borer: 1px solid grey;
+	border-radius: 0.5rem;
+	padding: 0.8rem 0 0.8rem 0.8rem;
+	box-shadow: inset 0 2px 2px lightgrey;
+}
+
+.space-between{
+	display: flex;
+	justify-content: space-between;
+}
+.total{
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+.range{
+	-webkit-appearance : none;
+	width : 100%;
+	height: 8px;
+	background: #eee;
+	margin-top: 1.2rem;
+	border-radius: 0.3rem;
+	outline-color: rgba(0,212,255,1);
+}
+
+.range::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 50%;
+	background: rgba(0,212,255,1);
+	cursor: pointer;
+}
+
+/*this is for mozilla browser*/
+.range::-moz-range-thumb{
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 50%;
+	background: rgba(0,212,255,1);
+	cursor: pointer;
+	border: none;
+}
+
+.range::-moz-range-thumb{
+	border: 0;
+}
