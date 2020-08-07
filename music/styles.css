@@ -1,0 +1,56 @@
+body{
+	/*background: radial-gradient(#051937, #A8EB12);*/
+	background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+	font-size: 1.2em;
+	width: 50%;
+	margin: 20px auto;
+	padding: 20px;
+	text-align: center;
+	min-height: 50vh;
+}
+
+#songList{
+	background: grey;
+	border-radius: 20px;
+	text-align: left;
+	color: lightcyan;
+}
+
+li{
+	padding: 10px;
+}
+
+li:hover, svg:hover{
+	cursor: pointer;
+}
+
+#controls{
+	border: 1px cyan solid;
+	border-radius: 10px;
+	background:  grey;
+	padding: 1.5em;
+}
+svg{
+	color: lightcyan;
+}
+
+progress{
+	width: 60%;
+	margin: 2%;
+	
+	
+}
+
+p, h4{
+	color: lightcyan;
+}
+
+#currentlyPlayingSong{
+	color: lightcyan;
+	font-weight: bold;
+}
+
+#currentSong{
+	color: lightcyan;
+	font-weight: bold;
+}

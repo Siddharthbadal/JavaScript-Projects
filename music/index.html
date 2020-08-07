@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Player</title>
+	<link rel="stylesheet" href="styles.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+</head>
+<body>
+	<audio id="player" ontimeupdate="updateProgress()">
+		<source id="source">
+			Audio Not supported
+	</audio>
+	
+	<span id="currentlyPlayingSong"></span>
+	<em><span id=currentSong>	
+	</span></em>
+	
+	
+	<progress id="progress" value="0" max="100">
+	</progress>
+
+	<div id = "controls">
+			<i class="fas fa-play-circle fa-4x" onclick="playAudio()"></i>
+			<i class="fas fa-pause-circle fa-4x" onclick="pauseAudio()"></i>
+			<p>Volume: </p>
+			<i class="fas fa-volume-down fa-2x"></i>
+			<input type="range" id="volumeSlider" min="0.1" max="1" step="0.05">
+			<i class="fas fa-volume-up fa-2x"></i>
+	</div>
+
+	<h4>Trending:</h4>
+	<div id='songList'>
+		<!-- <ol>	
+			<li>Across-The-Universe</li>
+			<li>Bruce-Springsteen-Hello-Sunshine</li>
+			<li>Cat-Stevens-Moon-Shadow</li>
+			<li>Elton-John-Circle-of-Life</li>
+			<li>I'll-Find-My-Way-Home</li>
+			<li>Kris-Kristofferson-'The Pilgrim'</li>
+			<li>Simon-&-Garfunkel-El-Condor-Pasa</li>
+			<li>Somewhere-Over-The-Rainbow-What-A-Wonderful-World</li>
+			<li>The-Sound-of-Silence-Original-Version</li>
+			<li>Wicked-Game</li>
+			<li>Roxy-Music-More-Than-This</li>
+			<li>John-Lennon-Nobody-Loves-You</li>
+	</ol> -->
+	</div>
+
+
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
