@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>FAQ</title>
+	<style>
+		body, .jumbotron{ padding: 30px; }
+		body {
+			background: #efefef;
+		}
+		html{
+			overflow-y: scroll; 
+		}
+		.faq{
+			color: #c00c00;
+		}
+		ul{
+			margin-bottom: 0;
+		}
+		.accordion{
+			background: #fff;
+			border-radius: 5px;
+			padding: 30px;
+		}
+
+		.question{
+			border-top: 1px solid #eee;
+			padding: 20px;
+			cursor: pointer;
+			position: relative;
+		}
+		.question h2{
+			font-size: 20px;
+			margin: 0;
+			color: #c00c00;
+		}
+		.question .glyphicon{
+				position: absolute;
+				right: 20px;
+				top: 0;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				color: #c00c00;
+				transition: 1s cubic-bezier(0.175, 0.885,0.35,1.275) all;
+		}
+
+		.answer{
+			max-height: 0;
+			overflow:hidden;
+			transition: 2s cubic-bezier(0.175, 0.885,0.35,1.275) all;
+		}
+		.answer p{
+			padding: 20px;
+		}
+		.accordion li.open .glyphicon{
+			transform: rotate(180deg);
+		}
+		.accordion li.open .answer{
+			max-height: 150px;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+	<div class="accordion">
+		<h1 class='faq'>FAQ</h1>
+		<ul class="list-unstyled">
+			<li class='open'>
+				<div class="question">
+					<h2>Python or JavaScript</h2>
+					<span class="glyphicon glyphicon-chevron-down icon"></span></div>
+				<div class="answer">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enimecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</li>
+			<li>
+				<div class="question">
+					<h2>React or Vue</h2>
+					<span class="glyphicon glyphicon-chevron-down"></span></div>
+				<div class="answer">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enimecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</li>
+			<li>
+				<div class="question">
+					<h2>Flask or Django</h2>
+					<span class="glyphicon glyphicon-chevron-down"></span></div>
+				<div class="answer">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enimecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</li>
+			<li>
+				<div class="question">
+					<h2>Here or There</h2>
+					<span class="glyphicon glyphicon-chevron-down"></span></div>
+				<div class="answer">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enimecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+<script>
+	const accordion = document.querySelector(".accordion");
+	const items = accordion.querySelectorAll('li');
+	const questions = accordion.querySelectorAll('.question');
+
+	function toggleAccordion(){
+		const thisItem = this.parentNode;
+
+		items.forEach(item =>{
+			if(thisItem == item){
+				thisItem.classList.toggle('open');
+				return;
+
+			}
+			// item.classList.remove('open');
+		});
+		
+}
+
+questions.forEach(question => question.addEventListener('click', toggleAccordion))
+
+
+
+
+
+
+
+</script>
+	
+</body>
+</html>
